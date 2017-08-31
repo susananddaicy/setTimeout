@@ -28,11 +28,6 @@
 
 
 
-
-
-
-
-
 // setTimeout和setInterval的运行机制是，将指定的代码移出本次执行，等到下一轮 Event Loop 时，再检查是否到了指定时间。如果到了，就执行对应的代码；如果不到，就等到再下一轮 Event Loop 时重新判断。
 // setTimeout(f, 0)的作用是，尽可能早地执行指定的任务。而并不是会立刻就执行这个任务。
 // setTimeout(f, 0)指定的任务，最早也要到下一次Event Loop（事件循环）才会执行。请看下面的例子。
@@ -72,7 +67,6 @@ console.log("当前任务结束");
 setTimeout(function(a,b){
   console.log(a+b);
 },1000,1,1);
-
 
 
 
